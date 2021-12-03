@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>今天该打什么呢？</title>
+ 
+
+</head>
+
+<body>   
+    
+    
+<script language=JavaScript>
+    var today = new Date();
+    var date;
+
+    var date1 = Date.parse("2021-12-01T00:00:00");
+    var date2 = Date.parse(today);
+    var ms = Math.abs(date2-date1);
+
+    var day = Math.floor(ms/(24*3600*1000));
+
+    var str="";
+
+    date = "北京时间：" + (today.getFullYear()) + "年" + (today.getMonth() + 1 ) + "月" + 
+        today.getDate() + "日";
+
+    if (day % 3 ==0){
+        str = "燕子坞：<font color='green'>蝎子</font>；最佳拍档：<font color='red'>火鸟</font>；零点零：<font color='brown'>老龙</font>。";
+    }else if (day % 3 ==1){
+        str = "燕子坞：<font color='red'>火鸟</font>；最佳拍档：<font color='brown'>老龙</font>；零点零：<font color='green'>蝎子</font>。";
+    }else{
+        str = "燕子坞：<font color='brown'>老龙</font>；最佳拍档：<font color='green'>蝎子</font>；零点零：<font color='red'>火鸟</font>。";
+    }
+    document.write("<h1>"+date+"</h1>")
+    document.write("<h1>"+str+"</h1>")
+
+    </script>
+</body>
+
+</html>
